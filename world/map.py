@@ -1,0 +1,20 @@
+class Map:
+    def __init__(self):
+        pass
+
+    def map_generator(self, level):
+        with open(level, "r", encoding="utf-8") as level_loader:
+            level_loader.readline()
+            return [list(line.strip()) for line in level_loader]
+
+    def initial_player_pos(self, level):
+        s = (-1, -1)
+        mushrooms = 0
+        for r, row in enumerate(level):
+            for c, cell in enumerate(row):
+                    if cell == '+':
+                        mushrooms += 1 
+                        continue
+                    if cell == "L":
+                        s = (r, c)
+        return (s, mushrooms)

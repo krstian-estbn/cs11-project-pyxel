@@ -1,0 +1,7 @@
+17 6
+TTTTTTTTTTTTTTTTT
+T...+R.*........T
+T....RLR.~......T
+T...TTx.....~...T
+T...+R......+...T
+TTTTTTTTTTTTTTTTT
