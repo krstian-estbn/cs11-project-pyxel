@@ -2,9 +2,8 @@ import pyxel
 from engine.game_manager import GameManager
 
 class App:
-    def __init__(self, map_file):
+    def __init__(self, map_file=None):
         self.game = GameManager()
-        
         self.map_file = map_file
         self.tile_map = {
             "T": (0,0,0),   # tree
@@ -38,7 +37,7 @@ class App:
         self.message_color = 0
 
         pyxel.init(self.width, self.height, title="SHROOOOOOOOOOMSSSSS")
-        pyxel.load("default_tile_map.pyxres")
+        pyxel.load("assets/default_tile_map.pyxres")
         pyxel.run(self.update, self.draw)
 
     def update(self):
